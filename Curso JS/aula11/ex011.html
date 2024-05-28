@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESTRANGEIRO</title>
+    <style>
+        body{
+            background-color: rgba(97, 97, 170, 0.678);
+        }
+    </style>
+</head>
+<body>
+    <h1>Estrangeiro ou não</h1>
+    Você é de qual país = <input type="text" name="txtp" id="txtp">
+    <input type="button" value="Finalizar" onclick="calcular()">
+    <div id="res">
+
+    </div>
+    <script>
+        function calcular() {
+        txtp = document.querySelector('input#txtp')
+        res= document.querySelector('div#res')
+        p =(txtp.value)
+        res.innerHTML = `<p>Vivendo em <strong>${p}</strong></p>`
+        if (p == "Brasil") {
+            res.innerHTML +=('<p>Você é <strong>Brasileiro!</strong></p>')
+        } else {
+            res.innerHTML +=('<p>Você é <strong>Estrangeiro!</strong></p>')
+        }
+        }
+    </script>
+    
+</body>
+</html>
